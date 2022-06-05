@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>CVS - Main Page</title>
 </head>
+
 <body>
-    <form action="login-engine.php" method="POST">
-        <input name="username" type="text" placeholder="IcNum">
-        <input name="password" type="password" placeholder="password">
-        <input name="login" type="submit">
-    </form>
+    <nav id="navbar" class="">
+        <div class="nav-wrapper">
+            <!-- Navbar Logo -->
+            <div class="logo">
+                <h1>Covid-19 Vaccination System</h1> 
+            </div>
+            <ul id="menu">
+                <li><a href="admin-login.html">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="main-left">
+           <h1><mark>Check Your Vaccination</mark></h1>
+           <h1><mark>Registration Here</mark>
+        </div>
+        <div class="main-right">
+            <div class="container-login">
+                <h3>Login using your IC number</h3>
+                <form action="user-login.php" method="POST">
+                    <input type="text" name="ICNum" placeholder="Enter your IC number">
+                    <input type="submit" class="login-btn">
+                </form>
+            </div>
+        </div>
+    </div>
     
+
+        
+
 </body>
+
 </html>
