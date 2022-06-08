@@ -9,13 +9,13 @@ $notempty = mysqli_num_rows($result);
 
 //query for incompleted dose recipient with appointment date
 $no1 = 1;
-$query1 = "SELECT * FROM vac_rep WHERE vac_stat = 'Completed 1st Dose' or vac_stat = 'Unvaccinated' AND isDateSet = 1";
+$query1 = "SELECT * FROM vac_rep WHERE isDateSet = 1";
 $result1 = mysqli_query($conn, $query1);
 $notempty1 = mysqli_num_rows($result1);
 
 //query for incompleted dose recipient without appointment date
 $no2 = 1;
-$query2 = "SELECT * FROM vac_rep WHERE vac_stat = 'Completed 1st Dose' or vac_stat = 'Unvaccinated' AND isDateSet = 0";
+$query2 = "SELECT * FROM vac_rep WHERE isDateSet = 0 AND vac_stat = 'Completed 1st Dose' OR vac_stat = 'Unvaccinated' ";
 $result2 = mysqli_query($conn, $query2);
 $notempty2 = mysqli_num_rows($result2);
 ?>
@@ -71,6 +71,7 @@ $notempty2 = mysqli_num_rows($result2);
                 <td><?php echo $ic ?></td>
                 <td><?php echo $name; ?></td>
                 <td>Completed 2nd Dose</td>
+                <td></td>
             </tr>
             <?php 
         $no++; 
