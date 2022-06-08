@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    box-sizing: content-box;
+* {
+    box-sizing: border-box;
     padding: 0%;
     margin: 0%;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     background-color: #BDDAEC;
 }
 
@@ -24,10 +24,11 @@ body{
 .nav-wrapper {
     margin: auto;
     text-align: center;
-    width:95%;
+    display: block;
+    width: 95%;
 }
 
-.logo h1{
+.logo h1 {
     float: left;
     font-size: 1.5em;
     height: 50px;
@@ -100,9 +101,9 @@ body{
     transition: 0s;
 }
 
-.main-left{
-    width: 50%; 
-    float: left; 
+.main-left {
+    width: 50%;
+    float: left;
     height: 100px;
     justify-content: center;
     height: 100vh;
@@ -110,20 +111,22 @@ body{
     flex-direction: column;
     justify-content: center;
 }
+
 .main-left h1 {
     padding-left: 30px;
     font-size: 40px;
 }
-.main-left h1 mark{
+
+.main-left h1 mark {
     background-color: #3bb54b;
     color: #fff;
     padding: 10px;
     border-radius: 5px;
 }
 
-.main-right{
-    width: 50%; 
-    float: right; 
+.main-right {
+    width: 50%;
+    float: right;
     height: 100vh;
     justify-content: center;
     display: flex;
@@ -132,7 +135,7 @@ body{
     align-items: center;
 }
 
-.container-login{
+.container-login {
     height: fit-content;
     background-color: #fff;
     border-radius: 10px;
@@ -140,15 +143,16 @@ body{
     padding: 20px;
 }
 
-.container-login h3{
+.container-login h3 {
     color: #294a69;
     margin-bottom: 20px;
 }
 
-.container-login label{
+.container-login label {
     margin-left: 8px;
 }
-.container-login input{
+
+.container-login input {
     display: block;
     min-width: 90%;
     padding: 7px 2px;
@@ -174,19 +178,89 @@ body{
 }
 
 @keyframes fade {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
 
-.inv-cont{
+.inv-cont {
     margin-top: 20vh;
     justify-content: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.top-table {
+    margin-top: 150px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top-table table {
+    font-family: 'Poppins', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.3em;
+    border-collapse: collapse;
+    overflow: hidden;
+    cursor: context-menu;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 80%;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.top-table table th{
+    background-color: #3cb54b;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.top-table table td{
+    background-color: #ffffff;
+    color: #282761;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.top-table table tr .table-header{
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+    border-radius: 10px 10px 0 0;
+    font-size: 18px;
+}
+
+.setBtn{
+    background-color: #fff;
+    color: #3cb54b;
+    border: 1px solid #3cb54b;
+    margin: 5px 0px 5px 30px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.setBtn:hover{
+    background-color: #3cb54b;
+    color: #fff;
+    border: 1px solid #3cb54b;
+}
+
+.setBtn a:link{
+    text-decoration: none;
+    color: #3cb54b;
+}
+
+.setBtn a:hover{
+    color: #fff;
 }
