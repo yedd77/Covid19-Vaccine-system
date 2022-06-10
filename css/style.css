@@ -306,3 +306,79 @@ body {
 .certdesc {
     margin-top: 30px;
 }
+
+.input{
+    display: block;
+    min-width: 90%;
+    padding: 7px 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gray;
+    background: rgba(0, 0, 0, 0.05);
+    color: #000;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+}
+
+.container-register{
+    margin: 150px auto 50px auto;
+    width: 40%;
+    height: fit-content;
+    border-radius: 25px;
+    justify-content: center;
+    padding: 30px;
+    background-color: #fff;
+}
+
+.container-register h1{
+    font-family: 'Poppins' , sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.container-register h2{
+    font-family: 'Poppins' , sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.container-register label {
+    font-family: 'Poppins' , sans-serif;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.container-register input {
+    display: block;
+    min-width: 100%;
+    padding: 7px 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gray;
+    background: rgba(0, 0, 0, 0.05);
+    color: #000;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+}
+
+.container-register .login-btn:hover {
+    background-color: #292560;
+    color: #fff;
+    animation: fade ease 1s;
+}

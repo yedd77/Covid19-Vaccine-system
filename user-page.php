@@ -46,9 +46,10 @@ session_start();
                         echo "Completed all appointment";
                     } else if ($_SESSION['vacdateset'] == 1){
                         echo $_SESSION['vacapt'];
-                    }
+                    } 
                 ?>
             </td>
+            <td><?php echo $_SESSION['vacstat']; ?></td>
             <td>
                 <?php 
 
@@ -59,7 +60,6 @@ session_start();
                 }    
                 ?>
             </td>
-            <td><a href="vac-cert.php?user_id=<?php echo $_SESSION['user_id'];?>">View</td>
         </table>
     </div>
 </body>

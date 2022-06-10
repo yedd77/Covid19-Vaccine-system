@@ -26,7 +26,7 @@ if(isset($_REQUEST["check"])){
         ?>
         <script>
             alert("You haven't registered for covid vaccination programme, Register now");
-            window.location("register-user.php");
+            window.location = 'register-user.php?ic_num=<?php echo $ic_num;?>'
         </script>
         <?php
     }

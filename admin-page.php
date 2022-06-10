@@ -67,8 +67,6 @@ $notempty2 = mysqli_num_rows($result2);
                 $ic = $row['Ic_num'];
                 $name = $row['rep_name'];
                 $vac_stat = $row['vac_stat'];
-                $vac_cert = $row['vac_cert'];
-                $isCertIssued = $row['isCertIssued'];
         ?>
             <tr>
                 <td><?php echo $no; ?></td>

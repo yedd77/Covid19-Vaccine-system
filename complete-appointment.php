@@ -14,15 +14,18 @@ $stat = $data['vac_stat'];
 
 if($stat == "Unvaccinated"){
     $vacstat = "Completed 1st Dose";
+    $cert = 0;
 
 } else if ($stat == "Completed 1st Dose"){
     $vacstat = "Completed 2nd Dose";
+    $cert = 1;
 }
 
 $sql = "UPDATE vac_rep
 SET vac_stat = '$vacstat' ,
 vac_apt = '' ,
-isDateSet = 0 
+isDateSet = 0 ,
+isCertIssued = '$cert'
 WHERE user_id = '$user_id'";
 
  //if data inserted success
