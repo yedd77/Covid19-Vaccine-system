@@ -27,6 +27,7 @@ $notempty2 = mysqli_num_rows($result2);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="qrcode.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>CVS - Admin Page</title>
 </head>
@@ -62,17 +63,19 @@ $notempty2 = mysqli_num_rows($result2);
             </tr>
             <?php
             while($row = mysqli_fetch_assoc($result)){
+                $id = $row['user_id'];
                 $ic = $row['Ic_num'];
                 $name = $row['rep_name'];
                 $vac_stat = $row['vac_stat'];
                 $vac_cert = $row['vac_cert'];
+                $isCertIssued = $row['isCertIssued'];
         ?>
             <tr>
                 <td><?php echo $no; ?></td>
                 <td><?php echo $ic ?></td>
                 <td><?php echo $name; ?></td>
                 <td>Completed 2nd Dose</td>
-                <td><?php echo $vac_cert; ?></td>
+                <td><a href="vac-cert.php?user_id=<?php echo $id?>"> View</a></td>
             </tr>
             <?php 
         $no++; 
@@ -159,7 +162,7 @@ $notempty2 = mysqli_num_rows($result2);
         <!-- table for incompleted dose without appointment data -->
         <table>
             <tr>
-                <th colspan="2" class="table-header">Recipient without  Appointment</th>
+                <th colspan="2" class="table-header">Recipient without Appointment</th>
             </tr>
             <tr>
                 <th>No</th>

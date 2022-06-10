@@ -10,12 +10,14 @@ if(isset($_REQUEST["check"])){
     if(mysqli_num_rows($result) > 0){
         
         $row = mysqli_fetch_assoc($result);
+        $_SESSION['user_id'] = $row['user_id'];
         $_SESSION['name'] = $row['rep_name'];
         $_SESSION['Ic'] = $row[ 'Ic_num'];
         $_SESSION['vacstat'] =  $row['vac_stat'];
         $_SESSION['vacapt'] = $row['vac_apt'];
         $_SESSION['vacdateset'] = $row['isDateSet'];
         $_SESSION['vac_cert'] = $row['vac_cert'];
+        $_SESSION['issued'] = $row['isCertIssued'];
 
         header('location:user-page.php');
     }

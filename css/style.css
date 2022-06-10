@@ -154,7 +154,7 @@ body {
 
 .container-login input {
     display: block;
-    min-width: 90%;
+    min-width: 100%;
     padding: 7px 2px;
     padding-left: 20px;
     padding-right: 20px;
@@ -263,4 +263,46 @@ body {
 
 .setBtn a:hover{
     color: #fff;
+}
+
+.cert-cont{
+    background-color: #fff;
+    color: #000;
+    width: 30%;
+    height: 70vh;
+    justify-content: center;
+    text-align: center;
+    margin: 100px auto 50px auto; 
+    border-radius: 30px;
+    padding: 25px;
+    font-family: 'Poppins' , sans-serif;
+}
+
+.cert-cont h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.cert-cont h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.cert-cont hr {
+    height: 2px;
+}
+
+.Certname {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.CertIC {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.certdesc {
+    margin-top: 30px;
 }

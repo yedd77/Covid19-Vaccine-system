@@ -49,16 +49,17 @@ session_start();
                     }
                 ?>
             </td>
-            <td><?php echo $_SESSION['vacstat']; ?></td>
             <td>
                 <?php 
-                if($_SESSION['vacstat'] == "Completed 2nd Dose"){
-                    echo $_SESSION['vac_cert']; 
+
+                if($_SESSION['issued'] == 0) {
+                    echo "No Certificate issued yet";
                 } else {
-                    echo "No issued certficate yet";
-                }
+                    ?><a href="vac-cert.php?user_id=<?php echo $id?>"> View</a><?php
+                }    
                 ?>
-                </td>
+            </td>
+            <td><a href="vac-cert.php?user_id=<?php echo $_SESSION['user_id'];?>">View</td>
         </table>
     </div>
 </body>
