@@ -56,7 +56,7 @@ session_start();
                 if($_SESSION['issued'] == 0) {
                     echo "No Certificate issued yet";
                 } else {
-                    ?><a href="vac-cert.php?user_id=<?php echo $id?>"> View</a><?php
+                    ?><a href="vac-cert.php?user_id=<?php echo $_SESSION['user_id'];?>"> View</a><?php
                 }    
                 ?>
             </td>
